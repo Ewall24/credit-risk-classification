@@ -59,19 +59,39 @@ linear_classifier = LogisticRegression(random_state=1)
 linear_classifier.fit(X_train,y_train)
 
     
-    ![image](https://github.com/user-attachments/assets/c7dbb884-70c2-4567-aca3-a104810edb94)
+![image](https://github.com/user-attachments/assets/c7dbb884-70c2-4567-aca3-a104810edb94)
 
     
+  Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
   
-    
-    
-    Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
+    # Make a prediction using the testing data  
+predictions = linear_classifier.predict(X_test) 
+predictions   
+
+
 
     Evaluate the model’s performance by doing the following:
 
-        Generate a confusion matrix.
+    # Generate a confusion matrix for the model
+confusion_matrix_model = confusion_matrix(y_test, predictions)
+confusion_matrix_model_df = pd.DataFrame(
+    confusion_matrix_model,
+    index=['Actual Healthy (0)', 'Actual High-Risk (1)'],
+    columns=['Predicted Healthy (0)', 'Predicted High-Risk (1)']
+)
 
-        Print the classification report.
+    # display the findings 
+confusion_matrix_model_df
+
+        
+![image](https://github.com/user-attachments/assets/91b9a049-72fc-41bd-a7dc-32f9291895eb)
+
+     
+    # Print the classification report for the model
+print(classification_report(y_test, predictions))
+
+![image](https://github.com/user-attachments/assets/4e1eaaee-f2ac-4132-8e3c-253c649d606d)
+
 
     Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
 
