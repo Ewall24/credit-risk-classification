@@ -1,23 +1,17 @@
 # credit-risk-classification 
 
-Instructions
-
-The instructions for this Challenge are divided into the following subsections:
-
-    # Import the modules
+# Import the modules
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from sklearn.metrics import confusion_matrix, classification_report  
 
+The instructions for this Challenge are divided into the following subsections:
 
-    Split the Data into Training and Testing Sets
+  Create a Logistic Regression Model with the Original Data
+  Write a Credit Risk Analysis Report
+  Split the Data into Training and Testing Sets
 
-    Create a Logistic Regression Model with the Original Data
-
-    Write a Credit Risk Analysis Report
-
-Split the Data into Training and Testing Sets
 
 Open the starter code notebook and use it to complete the following steps:
 
@@ -33,18 +27,38 @@ lending_data_df.head()
 
 
 
-  Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns. 
+## Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns. 
+
+    # Separate the data into labels and features
+    # Separate the y variable, the labels
+y = lending_data_df['loan_status']
+     
+    # Separate the X variable, the features
+x = lending_data_df.drop(columns='loan_status') 
+
+     # Review the y variable Series
+y.head()
+![image](https://github.com/user-attachments/assets/f2640220-1515-457d-8082-9c6d32c7d5fb)
+
+    # Review the X variable DataFrame
+x.head()
+
+
+![image](https://github.com/user-attachments/assets/e3dcd841-5967-4f64-8464-a4770754816e)
+
+
+# Split the data using train_test_split
+
 
     # Import the train_test_learn module
 from sklearn.model_selection import train_test_split
 
-    # Split the data using train_test_split
     # Assign a random_state of 1 to the function
 X_train, X_test, y_train, y_test = train_test_split(x, y, random_state=1)
 
    
     
-  Create a Logistic Regression Model with the Original Data
+# Create a Logistic Regression Model with the Original Data
 
 Use your knowledge of logistic regression to complete the following steps:
 
@@ -69,8 +83,7 @@ predictions = linear_classifier.predict(X_test)
 predictions   
 
 
-
-    Evaluate the model’s performance by doing the following:
+Evaluate the model’s performance by doing the following:
 
     # Generate a confusion matrix for the model
 confusion_matrix_model = confusion_matrix(y_test, predictions)
@@ -93,7 +106,7 @@ print(classification_report(y_test, predictions))
 ![image](https://github.com/user-attachments/assets/4e1eaaee-f2ac-4132-8e3c-253c649d606d)
 
 
-    Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
+### Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
 
 
 Write a Credit Risk Analysis Report
