@@ -1,7 +1,13 @@
 # credit-risk-classification 
 # Overview 
 Credit Risk Analysis Report 
-Run a credit risk analysis report to check for faults in the overview. The end result is ...
+Run a credit risk analysis report to check for faults in the overview.  
+
+ An overview of the analysis: Explain the purpose of this analysis.
+
+    The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
+
+    A summary: Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
 
 
 
@@ -110,6 +116,12 @@ confusion_matrix_model_df
 print(classification_report(y_test, predictions))
 
 ![image](https://github.com/user-attachments/assets/4e1eaaee-f2ac-4132-8e3c-253c649d606d)
+
+- **word**
+
+
+
+
 
 
 ### Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
