@@ -11,12 +11,17 @@ Run a credit risk analysis report to check for faults in the overview.
 
 
 
+# Import the modules 
+   
+ import numpy as np
+ import pandas as pd 
+ from sklearn.model_selection import train_test_split 
+ from sklearn.linear_model import LogisticRegression 
+ from sklearn.metrics import confusion_matrix, classification_report   
+ import warnings
 
-# Import the modules
-import numpy as np
-import pandas as pd
-from pathlib import Path
-from sklearn.metrics import confusion_matrix, classification_report  
+
+
 
 The instructions for this Challenge are divided into the following subsections:
 
@@ -88,7 +93,7 @@ linear_classifier.fit(X_train,y_train)
 ![image](https://github.com/user-attachments/assets/c7dbb884-70c2-4567-aca3-a104810edb94)
 
     
-  Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
+ Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
   
     # Make a prediction using the testing data  
 predictions = linear_classifier.predict(X_test) 
