@@ -9,6 +9,14 @@ Run a credit risk analysis report to check for faults in the overview.
 
     A summary: Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
 
+-**The logistic regression model does a great job predicting both healthy (0) and high-risk (1) loans.**
+-**For healthy loans, it achieves perfect precision (1.00) and nearly perfect recall (0.99), resulting in an F1-score of 1.00.**
+-**For high-risk loans, it performs well with a precision of 0.84, recall of 0.94, and an F1-score of 0.89. Overall, the model is 99% accurate.**
+-**This is impressive given the imbalance in the data, with many more healthy loans than high-risk ones.**
+
+-**The model's high precision, recall, and F1-scores—both overall and for each class—demonstrate its effectiveness in handling this imbalance and accurately predicting both loan types.**
+
+
 
 
 # Import the modules 
@@ -122,7 +130,6 @@ print(classification_report(y_test, predictions))
 
 ![image](https://github.com/user-attachments/assets/4e1eaaee-f2ac-4132-8e3c-253c649d606d)
 
-- **word**
 
 
 
@@ -131,9 +138,9 @@ print(classification_report(y_test, predictions))
 
 ### Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
 
- The logistic regression model does a great job predicting both healthy (0) and high-risk (1) loans. For healthy loans, it achieves perfect precision (1.00) and nearly perfect recall (0.99), resulting in an F1-score of 1.00. For high-risk loans, it performs well with a precision of 0.84, recall of 0.94, and an F1-score of 0.89. Overall, the model is 99% accurate. 
- This is impressive given the imbalance in the data, with many more healthy loans than high-risk ones. 
- The model's high precision, recall, and F1-scores—both overall and for each class—demonstrate its effectiveness in handling this imbalance and accurately predicting both loan types.
+    The logistic regression model does a great job predicting both healthy (0) and high-risk (1) loans. For healthy loans, it achieves perfect precision (1.00) and nearly perfect recall (0.99), resulting in an F1-score of 1.00. For high-risk loans, it performs well with a precision of 0.84, recall of 0.94, and an F1-score of 0.89. Overall, the model is 99% accurate. 
+    This is impressive given the imbalance in the data, with many more healthy loans than high-risk ones. 
+    The model's high precision, recall, and F1-scores—both overall and for each class—demonstrate its effectiveness in handling this imbalance and accurately predicting both loan types.
 
 ## To close out the project:
 
