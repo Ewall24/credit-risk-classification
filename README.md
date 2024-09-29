@@ -1,13 +1,9 @@
 # credit-risk-classification 
-# Overview 
-Credit Risk Analysis Report 
-Run a credit risk analysis report to check for faults in the overview.  
+ 
+## Overview of the Analysis
 
- An overview of the analysis: Explain the purpose of this analysis.
+The purpose of this analysis is to assess the credit risk of loans using a machine learning model, specifically logistic regression. By predicting whether loans are likely to be healthy or high-risk (default), we aim to support financial institutions in making informed lending decisions. This analysis helps identify high-risk loans early, minimizing potential losses. The model's performance is evaluated on key metrics like accuracy, precision, recall, and the F1-score to ensure it can effectively distinguish between healthy and high-risk loans, even in the presence of imbalanced data.
 
-    The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
-
-    A summary: Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
 
 - The logistic regression model does a great job predicting both healthy (0) and high-risk (1) loans.
 - For healthy loans, it achieves perfect precision (1.00) and nearly perfect recall (0.99), resulting in an F1-score of 1.00.
