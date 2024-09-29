@@ -132,15 +132,7 @@ print(classification_report(y_test, predictions))
 
 
 
-
-
-
-
-### Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
-
-    The logistic regression model does a great job predicting both healthy (0) and high-risk (1) loans. For healthy loans, it achieves perfect precision (1.00) and nearly perfect recall (0.99), resulting in an F1-score of 1.00. For high-risk loans, it performs well with a precision of 0.84, recall of 0.94, and an F1-score of 0.89. Overall, the model is 99% accurate. 
-    This is impressive given the imbalance in the data, with many more healthy loans than high-risk ones. 
-    The model's high precision, recall, and F1-scores—both overall and for each class—demonstrate its effectiveness in handling this imbalance and accurately predicting both loan types.
+    
 
 ## To close out the project:
 
@@ -155,3 +147,21 @@ Structure your report by using the report template that Starter_Code.zip include
     The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
 
     A summary: Summarize the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
+
+ ## Results 
+ - Accurarcy: 99%
+ - Precision: 84%
+ - Recall:    94%
+
+   ## Summary
+   
+   The logistic regression model performs exceptionally well, with 99% overall accuracy in predicting both healthy and high-risk loans, despite the imbalance in the dataset. The model achieves perfect precision (1.00) and nearly perfect recall (0.99) for healthy loans, yielding an F1-score of 1.00. For high-risk loans, the precision (0.84), recall (0.94), and F1-score (0.89) are strong, indicating the model is effective at identifying high-risk cases without too many false positives.
+
+### Recommendations for Future Analysis:
+
+   - Addressing Data Imbalance: While the model handles imbalance well, exploring techniques like SMOTE (Synthetic Minority Oversampling Technique) or under-sampling the majority class could further improve high-risk loan predictions.
+   - Threshold Tuning: Adjusting the decision threshold may improve the precision-recall trade-off, especially for high-risk loans, depending on business priorities (e.g., minimizing false positives vs. maximizing recall).
+   - Feature Importance: Analyzing the model’s coefficients or using feature importance methods could reveal key drivers for predicting loan outcomes, guiding more effective risk assessment.
+   - Model Comparison: Comparing the logistic regression model with more complex models like random forests or gradient boosting could identify potential performance gains, especially in capturing high-risk loans more accurately.
+   - Cross-Validation: Conducting cross-validation on different subsets of the data can provide insights into model robustness and help refine it further.
+   - Explainability: Implementing SHAP or LIME to explain individual predictions could help provide actionable insights, especially for high-risk loans, aiding in decision-making.
